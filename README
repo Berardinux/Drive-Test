@@ -1,0 +1,30 @@
+Drive Testing Script
+This repository contains a script for automating drive testing using the 'smartctl' command. The script allows you to perform long tests on multiple drives simultaneously, log the results, and identify any failures.
+
+Features
+Initiates long tests for a list of drives in parallel.
+Monitors the progress of the tests and waits for them to complete.
+Checks the results of each test and identifies failed drives.
+Logs the output to a designated log file.
+Displays a summary of the test results, including SMART health status and error logs.
+Requirements
+To use this script, you need to have the following:
+
+Linux-based operating system
+'smartctl' command installed (usually available through 'smartmontools' package)
+Usage
+Clone the repository or download the script file.
+Open a terminal and navigate to the directory where the script is located.
+Modify the list of drives in the script according to your requirements.
+Run the script using the following command:
+bash drivetest.sh
+
+Monitor the progress and wait for the tests to complete.
+Once the tests finish, check the log file for the detailed results at '/var/log/drivetest.log'.
+If any drive fails the test, a file named 'failed_drive.txt' will be created in your home directory.
+Notes
+Ensure that you have proper permissions to execute the script and access the log files.
+Remember to review the log file for the complete results and any identified failures.
+Feel free to contribute to this project by submitting pull requests or suggesting improvements.
+
+Disclaimer: Use this script at your own risk. Always backup your important data before performing any drive tests.
